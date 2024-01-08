@@ -10,14 +10,14 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
-@Table
+@Table(name = "t_order")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String orderNumber;
 
